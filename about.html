@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />  
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+       <a href="index.html">Home</a>
+          </div>
+
+    <div class="nav-link-wrapper active-nav-link">
+       <a href="about.html">About</a>
+          </div>
+     </div>
+
+       <div class="right-side">
+           <div class="brand">
+       <div>AGNES CSOBAI</div>
+            </div>
+        </div>
+      </div>
+
+
+<div class="content-wrapper">
+    <div class="two-column-wrapper">
+        <div class="profile-images-wrapper">
+            <img src="images/crossFit.jpg">
+
+        </div>
+
+        <div class="profile-content-wrapper">
+            <h1>CrossFit is a lifestyle</h1> 
+            <p>Characterized by safe, effective exercise and sound nutrition. CrossFit can be used to accomplish any goal, from improved health to weight loss to better performance. 
+            The program works for everyone — people who are just starting out and people who have trained for years. 
+            A form of high intensity interval training, CrossFit is a strength and conditioning workout that is made up of functional movement performed at a high intensity level. 
+            These movements are actions that you perform in your day-to-day life, like squatting, pulling, pushing etc. Many workouts feature variations of squats, push-ups, and weight lifting that last for predetermined amounts of time to help build muscles. 
+            This varies from a traditional workout that may tell you how many reps to do over any period of time.</p>
+
+        </div>
+    </div>
+</div>
+   
+</body>
+<script>
+const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover' , () => {
+        console.log(portfolioItem.childNodes[1].classList);
+        portfolioItem.childNodes[1].classList.add('img-darken');
+
+    })
+    portfolioItem.addEventListener('mouseout' , () => {
+        portfolioItem.childNodes[1].classList.remove('img-darken');
+
+    })
+
+})        
+
+</script>
+</html>
